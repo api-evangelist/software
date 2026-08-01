@@ -1,20 +1,75 @@
 aid: software
 name: Software
-description: Software is a company surfaced as a portfolio company of 8vc and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
+description: >-
+  Software (software.com) is the developer-productivity company behind the Code
+  Time and Music Time editor plugins, now rebranded and operating as Antenna
+  (antenna.dev). Antenna is an AI-native development intelligence platform — a
+  control plane for AI-driven software development that measures AI-tool
+  adoption, engineering productivity shifts, and financial ROI across an
+  engineering organization. It integrates with AI coding assistants (Claude
+  Code, GitHub Copilot, Cursor, Codex, Gemini Code Assist, Windsurf, Amazon Q
+  Developer, Kiro, Augment Code), Git providers (GitHub, GitLab, Bitbucket,
+  Azure DevOps), Jira, Slack and Microsoft Teams, and exposes a hosted Model
+  Context Protocol (MCP) server so AI agents can query engineering metrics in
+  natural language. Backed by 8vc; reports serving 900K+ developers across 10K+
+  companies.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://antenna.dev/opengraph-image.png
 url: https://raw.githubusercontent.com/api-evangelist/software/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 8vc
-x-tier: stub
+x-tier: profiled
 x-tier-reason: portfolio-lead
+x-former-domain: software.com
+x-rebrand: Antenna (antenna.dev)
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Developer Productivity
+- Engineering Intelligence
+- AI
+- Software Development
+- Analytics
+- Metrics
+- DORA
+- MCP
+- Developer Experience
+apis:
+- name: Antenna Enterprise Metrics API
+  description: >-
+    Read-only enterprise engineering-metrics API exposed as a hosted Model
+    Context Protocol (MCP) server over Streamable HTTP. AI assistants and agents
+    query contributor metrics, identity groups, and trends in natural language,
+    authenticated with a Bearer enterprise access token.
+  humanURL: https://docs.antenna.dev/mcp-server
+  baseURL: https://app.antenna.dev/api
+  properties:
+  - type: MCPServer
+    url: mcp/software-mcp.yml
+  - type: Authentication
+    url: authentication/software-authentication.yml
+  - type: APIReference
+    url: https://docs.antenna.dev/mcp-server
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -22,4 +77,54 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://software.com
+  url: https://antenna.dev
+- type: DeveloperPortal
+  url: https://docs.antenna.dev
+- type: Documentation
+  url: https://docs.antenna.dev
+- type: APIReference
+  url: https://docs.antenna.dev/mcp-server
+- type: GettingStarted
+  url: https://docs.antenna.dev/get-started/quickstart
+- type: GitHubOrganization
+  url: https://github.com/swdotcom
+- type: StatusPage
+  url: https://status.antenna.dev
+- type: ChangeLog
+  url: https://docs.antenna.dev/changelog
+- type: ChangeLog
+  url: changelog/software-changelog.yml
+- type: SignUp
+  url: https://app.antenna.dev/signup
+- type: Support
+  url: mailto:support@antenna.dev
+- type: Pricing
+  url: https://antenna.dev/pricing
+- type: TermsOfService
+  url: https://antenna.dev/legal/terms
+- type: PrivacyPolicy
+  url: https://antenna.dev/legal/privacy
+- type: Security
+  url: https://antenna.dev/legal/security
+- type: TrustCenter
+  url: https://antenna.dev/security
+- type: Compliance
+  url: https://antenna.dev/security
+- type: LinkedIn
+  url: https://www.linkedin.com/company/antennadev
+- type: MCPServer
+  url: mcp/software-mcp.yml
+- type: Authentication
+  url: authentication/software-authentication.yml
+- type: Packages
+  url: packages/software-packages.yml
+- type: Lifecycle
+  url: lifecycle/software-lifecycle.yml
+- type: DomainSecurity
+  url: security/software-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/software-vulnerability-disclosure.yml
+- type: Conformance
+  url: conformance/software-conformance.yml
+- type: LLMsTxt
+  url: llms/software-llms.txt

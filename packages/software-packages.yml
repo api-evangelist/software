@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/swdotcom
+notes: >-
+  Antenna (Software.com, GitHub org "swdotcom") publishes no dedicated client
+  SDK for its metrics/MCP API — the MCP server is consumed directly over
+  Streamable HTTP with a Bearer token. The first-party packages below are
+  utility libraries and the legacy Code Time / Music Time editor telemetry
+  plugins. Because none is an API client SDK, no `SDKs` pointer is emitted (only
+  `Packages`). Marketplace plugin IDs not individually verified are omitted
+  rather than guessed.
+packages:
+- language: javascript
+  registry: npm
+  name: file-it
+  url: https://www.npmjs.com/package/file-it
+  install: npm install file-it
+  official: true
+  repo: https://github.com/swdotcom/file-it
+  description: Easily read/write/update JSON files (first-party utility library).
+- language: javascript
+  registry: npm
+  name: swdc-tracker
+  url: https://www.npmjs.com/package/swdc-tracker
+  install: npm install swdc-tracker
+  official: true
+  repo: https://github.com/swdotcom/swdc-tracker
+  description: swdc event tracker — sends Software.com/Antenna events to Snowplow.
+editor_plugins:
+  note: >-
+    Legacy first-party "Code Time" / "Music Time" developer-productivity
+    plugins, distributed via editor marketplaces (source in github.com/swdotcom).
+  repos:
+  - {name: swdc-vscode, editor: Visual Studio Code, lang: TypeScript, desc: Code Time time-tracking plugin}
+  - {name: swdc-vscode-musictime, editor: Visual Studio Code, lang: TypeScript, desc: Music Time plugin}
+  - {name: codetime-intellij, editor: IntelliJ / JetBrains, lang: Java, desc: Code Time plugin}
+  - {name: swdc-eclipse-codetime, editor: Eclipse, lang: Java, desc: Code Time plugin}
+  - {name: swdc-visualstudio, editor: Visual Studio, lang: 'C#', desc: Code Time plugin}
+  - {name: swdc-sublime, editor: Sublime Text, lang: Python, desc: Code Time plugin}
+  - {name: swdc-atom, editor: Atom, lang: JavaScript, desc: Code Time plugin}
+  - {name: swdc-vim, editor: Vim, lang: Vim script, desc: Code Time plugin}
+  - {name: swdc-netbeans, editor: NetBeans, lang: Java, desc: Code Time plugin}

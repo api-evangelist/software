@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+url: https://antenna.dev/security
+certifications:
+- SOC 2 Type 2
+compliance_monitoring:
+  platform: Drata
+  description: Continuous-compliance platform used to monitor security posture on an ongoing basis.
+evidence:
+- source: https://antenna.dev/security
+  keywords: [soc 2 type 2, trust center, drata, compliance report]
+- source: https://antenna.dev/legal/security
+  keywords: [security policy, encryption, aws, argon2, tls]
+claims:
+  statement: >-
+    "We are SOC 2 Type 2 compliant. We partner with Drata, a continuous
+    compliance platform, to monitor our security posture on an ongoing basis."
+  compliance_report: linked from the Trust Center ("See our compliance report")
+notes: >-
+  Trust Center at antenna.dev/security names SOC 2 Type 2 (Drata-monitored).
+  Data residency: United States (AWS). Data at rest encrypted with
+  XChaCha20Poly1305IETF; backups AES-256; TLS in transit.

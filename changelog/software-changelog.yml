@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.antenna.dev/changelog
+archive: https://docs.antenna.dev/changelog/archive
+scheme: dated                 # date-based changelog, not semver
+current_version: null         # product is continuously deployed; no public version string
+entries:
+- date: '2026-05-18'
+  type: improvement
+  highlights:
+  - Improved AI Engagement Accuracy
+- date: '2026-04-15'
+  type: release
+  highlights:
+  - >-
+    Company rebrand and refined mission articulation (Software.com → Antenna) —
+    "the control plane for AI-driven software development."
+- date: '2026-02-18'
+  type: fix
+  highlights:
+  - Improved Accuracy for Time to Develop Metric
+- date: '2025-10-27'
+  type: release
+  highlights:
+  - >-
+    Refined commit-to-PR attribution: each commit is associated with a single
+    pull request; merge/base-branch/hotfix commits excluded from calculations.
+- date: '2025-10-03'
+  type: release
+  highlights:
+  - >-
+    Improved abandoned-PR threshold and attribution; toggle to show completed
+    work for historical context (off by default).
+- date: '2025-09-09'
+  type: release
+  highlights:
+  - Ongoing metric and algorithm improvements.
+recent_highlight_titles:
+- Cost per New Delivery
+- New, Churn, and Refactor
+- New Deliveries per Developer
+- Deployment Report Fixes and Improvements
+- Weekly Group Email Report Fix
+- Group Membership Improvements
+- Deployment Frequency Fix
+- Git User Improvements
+- New KPIs Report
+notes: >-
+  Recent window captured verbatim from the live dated changelog on
+  2026-07-21; the archive holds full history. Highlight titles above appear in
+  the recent changelog but were not all individually date-stamped in the
+  captured view.

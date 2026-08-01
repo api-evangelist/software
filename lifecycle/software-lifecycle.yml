@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://antenna.dev
+versioning:
+  scheme: continuous
+  current: null
+  docs: https://docs.antenna.dev/changelog
+  notes: >-
+    Continuously deployed SaaS with a dated changelog; no public API version
+    string. The hosted MCP endpoint is unversioned (/api/mcp/enterprise).
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No published deprecation policy or RFC 8594 Sunset/Deprecation header contract found.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.antenna.dev
+changelog: https://docs.antenna.dev/changelog
+deprecated_operations: []

@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://antenna.dev/security, https://docs.antenna.dev/mcp-server
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: Trust Center at antenna.dev/security states SOC 2 Type 2, Drata-monitored.
+- id: mcp
+  conforms: true
+  evidence: >-
+    Publishes a hosted Model Context Protocol server (Streamable HTTP transport)
+    at app.antenna.dev/api/mcp/enterprise with a documented tool set.
+- id: rfc6750-bearer-token
+  conforms: true
+  evidence: API auth is an Authorization Bearer enterprise access token.
+- id: tls-everywhere
+  conforms: true
+  evidence: Security Policy states HTTPS/TLS by default for everything; no fail-open.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth 2.0 authorization flows; auth is a static enterprise bearer token.
+- id: oidc
+  conforms: false
+  evidence: >-
+    Console sign-in uses enterprise SSO (Okta, Microsoft Entra), but no OIDC
+    discovery/API surface is published.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No OpenAPI or documented problem+json error contract found.
+notes: >-
+  Derived/searched from published compliance and MCP documentation. Antenna
+  ships no OpenAPI, so spec-shape conformance (pagination, idempotency, error
+  envelope) could not be asserted.

@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: probed
+source: live probe 2026-07-21
+notes: >-
+  No /.well-known/ discovery documents are published on any Antenna host.
+  software.com (apex) fails the TLS handshake (parked/redirect domain); www
+  redirects to antenna.dev. Absence is valid, expected data — no WellKnown /
+  SecurityTxt pointer is emitted.
+hosts:
+- host: https://antenna.dev
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+- host: https://app.antenna.dev
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+- host: https://software.com
+  reachable: false
+  error: TLS handshake failure (sslv3 alert handshake failure)

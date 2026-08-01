@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://docs.antenna.dev/mcp-server
+server:
+  name: Antenna MCP
+  vendor: Antenna (Software.com)
+  transport: http            # Streamable HTTP
+  url: https://app.antenna.dev/api/mcp/enterprise
+  description: >-
+    Hosted Model Context Protocol server that lets AI assistants and agents
+    query an enterprise's engineering metrics directly with natural-language
+    prompts (contributor productivity, AI-tool adoption, team trends). Exposes
+    read-only tools scoped to the caller's enterprise.
+auth:
+  scheme: bearer
+  header: Authorization
+  format: 'Bearer <Enterprise Access Token>'
+  token_type: Enterprise Access Token
+  token_management: >-
+    Generated in the Antenna app under enterprise settings → Access Tokens →
+    Create token. Shown once; must be stored securely. Requires an Antenna
+    enterprise account with the MCP feature enabled.
+clients_documented:
+- Claude Desktop and Claude Code
+- Claude on AWS Bedrock
+- Cursor
+- Augment Code
+- ChatGPT / Codex (desktop app and Codex CLI)
+tools:
+- name: contributor_metric_fields
+  description: List the contributor metric fields available for querying.
+  access: read-only
+- name: enterprise_identity_groups
+  description: List identity groups (teams) available for filtering contributor metrics.
+  access: read-only
+- name: enterprise_identity_search
+  description: Search enterprise identities by display name, username, email, or external account ID.
+  access: read-only
+- name: contributor_metrics_list
+  description: Return contributor metrics for an enterprise over a bounded date range.
+  access: read-only
+- name: contributor_metrics_trends
+  description: Return per-period contributor metrics for selected enterprise identities.
+  access: read-only
+notes: >-
+  Verbatim from the published Antenna MCP documentation. The MCP endpoint
+  responds 404 to unauthenticated GET (POST/Streamable-HTTP, auth-gated). Tool
+  list captured 2026-07-21.
