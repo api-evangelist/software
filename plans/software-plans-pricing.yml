@@ -1,0 +1,62 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://antenna.dev/pricing
+sources:
+- https://antenna.dev/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: per-seat
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Per-user and per-agent pricing with monthly/annual options; Enterprise is custom.
+plan_count: 7
+currency: USD
+plans:
+- name: Business — Engineering user
+  price_text: $29 per user /mo
+  price: 29
+  currency: USD
+  period: month
+  unit: per user
+  included_quota: Includes 10 merged PRs per user per month
+- name: Business — Engineering user (annual)
+  price_text: $348 per user /yr
+  price: 348
+  currency: USD
+  period: year
+  unit: per user
+- name: Business — Business user
+  price_text: $15 per user /mo
+  price: 15
+  currency: USD
+  period: month
+  unit: per user
+- name: Business — Business user (annual)
+  price_text: $180 per user /yr
+  price: 180
+  currency: USD
+  period: year
+  unit: per user
+- name: Business — Agent
+  price_text: From $49 per agent /mo
+  price: 49
+  currency: USD
+  period: month
+  unit: per agent
+- name: Business — Agent (annual)
+  price_text: From $588 per agent /yr
+  price: 588
+  currency: USD
+  period: year
+  unit: per agent
+- name: Enterprise
+  price_text: Custom
+  period: none
+  included_quota: Every business feature plus advanced data, dedicated onboarding, priority support
